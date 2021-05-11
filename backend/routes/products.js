@@ -36,9 +36,9 @@ router.get('/:product_name/:product_name_2', function(req, res, next) {
 
 /* PUT: Atualizar produto*/
 
-router.put("/:id_products", function (req, res, next) {
-  knex('User').
-      where({id_products: req.params.id_products})
+router.put("/:id_product", function (req, res, next) {
+  knex('Product').
+      where({id_product: req.params.id_product})
       .update(req.body)
       .then((results) => {
         res.status(200).json({ resultados: results });
@@ -48,9 +48,9 @@ router.put("/:id_products", function (req, res, next) {
 
 /* DELETE : Remove produto por id */
 
-router.delete("/:id_products", function (req, res, next) {
-  knex('User').
-      where({id_products: req.params.id_products})
+router.delete("/:id_product", function (req, res, next) {
+  knex('Product').
+      where({id_product: req.params.id_product})
       .del()
       .then((results) => {
         res.status(200).json({ resultados: results });
