@@ -27,14 +27,14 @@ exports.up = function(knex) {
        
     })
     .createTable('Purchase', table => {
-        table.increments('id_purchase').notNullable().primary('id');   //increments means 'id int unsigned not null auto_increment primary key'
+        table.string('id_purchase').notNullable().primary('id');   //increments means 'id int unsigned not null auto_increment primary key'
         table.integer('id_user');
         table.foreign('id_user').references('id_user').inTable('User').onDelete('NO ACTION');
          //default lenght of string is 255
        
     })
     .createTable('Purchase_Product', table => {
-        table.integer('id_purchase');   //increments means 'id int unsigned not null auto_increment primary key'
+        table.string('id_purchase');   //increments means 'id int unsigned not null auto_increment primary key'
         table.integer('id_product');
         table.foreign('id_product').references('id_product').inTable('Product').onDelete('NO ACTION');
         table.foreign('id_purchase').references('id_purchase').inTable('Purchase').onDelete('NO ACTION');
