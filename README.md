@@ -102,3 +102,4 @@ GET - http://localhost/api/categorias/
 2 - Listar produtos de uma categoria.
 ```bash
 GET - http://localhost/api/categorias/:id_category
+``` 
