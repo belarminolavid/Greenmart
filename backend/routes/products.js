@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   knex.select()
   .from("Product")
   .then((results) => {
-      res.status(200).json({ resultados: results });
+      res.status(200).json({ products: results });
   })
   .catch((e) => next(e));
 });
