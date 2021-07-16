@@ -5,11 +5,12 @@ Focado no desenvolvimento de um servidor com API REST, capaz de implemetar funç
 
 O Greenmart tem o objetivo de ser um sistema web de e-commerce de varejo de frutas e vegetais, com o back-end implementado com Node-Express e com front-end (Projeto 2) em uma aplicação React.js.
 
+
 ## Comando para iniciar Servidor
 ```bash
 yarn local up
 ```
-
+Dependências (yarn e docker)
 ## Comando para popular a Base de Dados
 
 ```bash
@@ -103,3 +104,13 @@ GET - http://localhost/api/categorias/
 ```bash
 GET - http://localhost/api/categorias/:id_category
 ``` 
+
+
+## Comando para iniciar o React App
+```bash
+cd web
+```
+
+```bash
+yarn start
+```
