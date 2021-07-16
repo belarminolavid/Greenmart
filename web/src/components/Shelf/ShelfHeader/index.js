@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Sort from '../Sort';
 import './style.scss';
 
 const ShelfHeader = props => {
