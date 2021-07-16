@@ -3,19 +3,6 @@ import axios from 'axios';
 
 import { productsAPI } from '../util';
 
-const compare = {
-  lowestprice: (a, b) => {
-    if (a.price < b.price) return -1;
-    if (a.price > b.price) return 1;
-    return 0;
-  },
-  highestprice: (a, b) => {
-    if (a.price > b.price) return -1;
-    if (a.price < b.price) return 1;
-    return 0;
-  }
-};
-
 export const fetchProducts = (filters, sortBy, callback) => dispatch => {
   return axios 
     .get(productsAPI)
@@ -28,13 +15,7 @@ export const fetchProducts = (filters, sortBy, callback) => dispatch => {
         );
       }
 
-      if (!!sortBy) {
-        products = products.sort(compare[sortBy]);
-      }
       
-      if (!!callback) {
-        callback();
-      }
 
       return dispatch({
         type: FETCH_PRODUCTS,
